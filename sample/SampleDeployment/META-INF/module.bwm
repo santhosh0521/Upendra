@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_9QBtkL9XEe6q_OL9xOIm2A" targetNamespace="http://tns.tibco.com/bw/composite/SampleDeployment" name="SampleDeployment" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_UvjHoM7xEe6ezIA1kPaeMA" name="resource" promote="ComponentResource/resource">
+    <sca:interface.wsdl xmi:id="_UvrqgM7xEe6ezIA1kPaeMA" interface="http://xmlns.example.com/20240219120716PLT#wsdl.interface(resource)" scaext:wsdlLocation="../Processes/variables/Resource.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_UwI9gM7xEe6ezIA1kPaeMA" name="RestService" path="/resource" docBasePath="http://localhost:7777/SampleDeployment" docResourcePath="Resource" basePath="/" connector="sampledeployment.Resource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/variables.Resource-Resource.json">
+      <operation xmi:id="_UweUsM7xEe6ezIA1kPaeMA" operationName="get" nickname="get-resource" httpMethod="GET" notes="getResource" responseStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_UxjSwM7xEe6ezIA1kPaeMA"/>
+      <advancedConfig xmi:id="_UwI9gc7xEe6ezIA1kPaeMA" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_Uwe7wM7xEe6ezIA1kPaeMA" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_-Ec0IL9XEe6q_OL9xOIm2A" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_-EhFkL9XEe6q_OL9xOIm2A" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_-EiTsL9XEe6q_OL9xOIm2A" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_-EiTsb9XEe6q_OL9xOIm2A" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_-EmlIL9XEe6q_OL9xOIm2A" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_-EpocL9XEe6q_OL9xOIm2A" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_-EsEsL9XEe6q_OL9xOIm2A" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_-Eug8L9XEe6q_OL9xOIm2A" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_-EwWIL9XEe6q_OL9xOIm2A" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_9XV2gL9XEe6q_OL9xOIm2A" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_9XV2gb9XEe6q_OL9xOIm2A" processName="variables.Process"/>
+  </sca:component>
+  <sca:component xmi:id="_aclKUMGoEe6-BLDhGBT7PA" name="ComponentRenderXML" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_aclKUcGoEe6-BLDhGBT7PA" processName="variables.RenderXML"/>
+  </sca:component>
+  <sca:component xmi:id="_UvYIgM7xEe6ezIA1kPaeMA" name="ComponentResource" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_UvYIgc7xEe6ezIA1kPaeMA" processName="variables.Resource"/>
+    <sca:service xmi:id="_UvdoEM7xEe6ezIA1kPaeMA" name="resource">
+      <sca:interface.wsdl xmi:id="_UvfdQM7xEe6ezIA1kPaeMA" interface="http://xmlns.example.com/20240219120716PLT#wsdl.interface(resource)" scaext:wsdlLocation="../Processes/variables/Resource.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

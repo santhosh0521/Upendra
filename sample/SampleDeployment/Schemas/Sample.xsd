@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Sample" xmlns:tns="http://www.example.org/Sample" elementFormDefault="qualified">
+
+    <element name="Employees" type="tns:EmployeesType"></element>
+    
+    <complexType name="EmployeesType">
+    	<sequence>
+    		<element name="Emplyees" type="tns:EmployeesType1"
+    			maxOccurs="unbounded" minOccurs="0">
+    		</element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="EmployeesType1">
+    	<sequence>
+    		<element name="ID" type="string"></element>
+    		<element name="Name" type="string"></element>
+    		<element name="Place" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>
